@@ -6,13 +6,13 @@ const { Router } = require("express");
 const { check } = require("express-validator");
 const router = Router();
 
+const { validateFields } = require("../middlewares/validateFields");
+const { validateJWT } = require("../middlewares/validateJWT");
 const {
   createUser,
   loginUser,
   revalidateUser,
 } = require("../controllers/auth");
-const { validateFields } = require("../middlewares/validateFields");
-const { validateJWT } = require("../middlewares/validateJWT");
 
 router.get(
     "/renew",
