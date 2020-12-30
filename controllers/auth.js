@@ -51,7 +51,7 @@ const loginUser = async (req, res = response) => {
     if (!user) {
       return res.status(400).json({
         ok: false,
-        msg: "Usuario y/o contraseña no valida[U]",
+        msg: "Usuario y/o contraseña no valida",
       });
     }
 
@@ -60,7 +60,7 @@ const loginUser = async (req, res = response) => {
     if (!validPassword) {
       return res.status(400).json({
         ok: false,
-        msg: "Usuario y/o contraseña no valida[P]",
+        msg: "Usuario y/o contraseña no valida",
       });
     }
 
